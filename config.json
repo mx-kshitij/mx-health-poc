@@ -143,8 +143,8 @@
             "enabled": false
         }
     },
-    "appVersion": "0.0.3",
-    "buildNumber": 3,
+    "appVersion": "0.0.4",
+    "buildNumber": 4,
     "runtimeUrl": "http://192.168.178.52:8080",
     "hermesEnabled": false
 }
