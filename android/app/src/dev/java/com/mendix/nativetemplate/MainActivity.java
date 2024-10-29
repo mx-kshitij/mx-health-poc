@@ -37,6 +37,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import dev.matinzd.healthconnect.permissions.HealthConnectPermissionDelegate;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
         cameraView.setResultHandler(this);
         startCameraWithPermissions();
-
+        HealthConnectPermissionDelegate.INSTANCE.setPermissionDelegate(this, "com.google.android.apps.healthdata");
         handleLaunchWithData(getIntent());
     }
 
